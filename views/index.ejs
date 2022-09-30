@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background: #111">
+    <div class="index-hero">
+      <div id="login-modal-id" class="login-modal">
+        <form
+          id="login-form"
+          class="login-modal-content animate-login-modal"
+          action="/index"
+          method="POST"
+        >
+          <div class="imgcontainer">
+            <span
+              onclick="loginFormModalDisplayNone('login-modal-id')"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <div class="avatar">Se Connecter</div>
+          </div>
+          <div class="login-form-container">
+            <label for="email"><b>Email na yo</b></label>
+            <input
+              type="email"
+              placeholder="Koma email na yo"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>Mot de passe</b></label>
+            <input
+              type="password"
+              placeholder="Koma mot de passe"
+              name="psw"
+              required
+            />
+
+            <button type="submit">Connexion</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Kanisa ngai
+            </label>
+          </div>
+          <div class="login-form-container">
+            <button
+              type="button"
+              onclick="loginFormModalDisplayNone('login-modal-id')"
+              class="cancelbtn"
+            >
+              Longola
+            </button>
+            <span class="psw">Obosani <a href="#">mot de passe?</a></span>
+          </div>
+        </form>
+      </div>
+      <div id="sign-up-modal-id" class="login-modal">
+        <form
+          id="sign-up-form"
+          class="login-modal-content animate-login-modal"
+          action="/index"
+          method="POST"
+        >
+          <div class="imgcontainer">
+            <span
+              onclick="loginFormModalDisplayNone('sign-up-modal-id')"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <div class="avatar">Bo S'aboné</div>
+          </div>
+          <div class="login-form-container">
+            <label for="fullName"><b>Nkombo na yo</b></label>
+            <input
+              type="text"
+              placeholder="Koma email na yo"
+              name="fullName"
+              required
+            />
+            <label for="telephone"><b>Nimero ya telephone (Optionel)</b></label>
+            <input
+              type="text"
+              placeholder="Koma email na yo"
+              name="telephone"
+              required
+            />
+
+            <label for="email"><b>Email na yo</b></label>
+            <input
+              type="text"
+              placeholder="Koma email na yo"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>Mot de passe</b></label>
+            <input
+              type="password"
+              placeholder="Koma mot de passe"
+              name="psw"
+              required
+            />
+
+            <button type="submit">Connexion</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Kanisa ngai
+            </label>
+          </div>
+          <div class="login-form-container">
+            <button
+              type="button"
+              onclick="loginFormModalDisplayNone('sign-up-modal-id')"
+              class="cancelbtn"
+            >
+              Longola
+            </button>
+            <span class="psw">Obosani <a href="#">mot de passe?</a></span>
+          </div>
+        </form>
+      </div>
+      <header>
+        <nav>
+          <h2 class="logo">Boye <span>bi</span></h2>
+          <ul>
+            <li><a href="/about">A propos na biso</a></li>
+          </ul>
+          <button
+            type="button"
+            onclick="loginFormModalDisplayBlock('sign-up-modal-id')"
+          >
+            Bo S'aboné
+          </button>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="welcome-text">
+          <div class="row">
+            <h1 class="column">
+              Boyeyi Bolamu na site na biso. Awa, okokutana na b'elombe ya
+              Bayindo nionso.
+            </h1>
+          </div>
+          <div class="row">
+            <h5 class="column">
+              Yekola bomoyi ya Kimpa Vita, Mvuluzi Kimbangu, Patrice lumumba na
+              b'elombe mosusu ya mboka na biso.
+            </h5>
+          </div>
+          <div class="row">
+            <ul class="column">
+              <li>
+                <button
+                  type="button"
+                  onclick="loginFormModalDisplayBlock('login-modal-id')"
+                >
+                  Connexion
+                </button>
+              </li>
+              <!-- <li>
+                <div class="d-flex justify-content-end">
+                  <img
+                    src="img/bamuangisi.png"
+                    alt="bamuangisi"
+                    width="50px"
+                    height="50px"
+                  />
+                  <p class="p-2 bd-highlight">Bamuangisi TV</p>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <img
+            class="poster-img"
+            src="/img/mokolo-moko-te.png"
+            alt="kimpa"
+            width="600"
+            height="400"
+          />
+        </div>
+        <div class="rhombus-img">
+          <img
+            src="https://images.fineartamerica.com/images-medium-large-5/michael-jackson-charcoal-lance-freeman.jpg"
+            alt=""
+          />
+          <img
+            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/el-congo-jose-guerrido-jr.jpg"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/OIP.nnEJulSUz--yr2qZLmV8SwHaFO?pid=ImgDet&rs=1"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/R.f92ba582a67a5731e54807ec173b45a0?rik=kOJMtRkSuQCHRQ&riu=http%3a%2f%2fclipartmag.com%2fimage%2fhistory-of-drawing-2.jpg&ehk=djzJ2icsQdbMYCKiz4ogXtbqVW16d5CW%2fkLMEaN3ZdM%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+          />
+          <img
+            src="https://i.pinimg.com/originals/21/92/69/219269e48274a41fc7b5f5a8f40b009f.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.babunga.alobi.cd/wp-content/uploads/2017/10/O3Qdq6r9ZUqEc2xB418YqkV16qQ-316x400.jpg"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/R.fcae474f16affebe9c7199b549b95e19?rik=GcUyd%2bN34VQqdg&pid=ImgRaw&r=0&sres=1&sresct=1"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/R.1703b6e94ea2fbe5ecacb00ef9804802?rik=K3Dz%2fZ%2fNw5Ht2Q&riu=http%3a%2f%2fwww.bundudiamayala.net%2fwp-content%2fuploads%2f2018%2f03%2fmbuta-matshua.jpg&ehk=wJxmkqYL8cNTX6g1uf4yL7HHHKpYGADfptZUQGc5oL4%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/R.324a440263efc68bd03545a63e35de1a?rik=nY7Eq3nqgeyrkA&pid=ImgRaw&r=0"
+            alt=""
+          />
+          <img
+            src="https://th.bing.com/th/id/R.832b1e699688fc4e4c76bcc975d3cbc0?rik=AQ%2bw45AZ3Rlrfw&pid=ImgRaw&r=0"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"
+      defer
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"
+      defer
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      windowElementLoaded(window);
+    </script>
+  </body>
+</html>
