@@ -15,135 +15,13 @@
   </head>
   <body style="background: #111">
     <div class="index-hero">
-      <div id="login-modal-id" class="login-modal">
-        <form
-          id="login-form"
-          class="login-modal-content animate-login-modal"
-          action="/index"
-          method="POST"
-        >
-          <div class="imgcontainer">
-            <span
-              onclick="loginFormModalDisplayNone('login-modal-id')"
-              class="close"
-              title="Close Modal"
-              >&times;</span
-            >
-            <div class="avatar">Se Connecter</div>
-          </div>
-          <div class="login-form-container">
-            <label for="email"><b>Email na yo</b></label>
-            <input
-              type="email"
-              placeholder="Koma email na yo"
-              name="email"
-              required
-            />
-
-            <label for="psw"><b>Mot de passe</b></label>
-            <input
-              type="password"
-              placeholder="Koma mot de passe"
-              name="psw"
-              required
-            />
-
-            <button type="submit">Connexion</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember" />
-              Kanisa ngai
-            </label>
-          </div>
-          <div class="login-form-container">
-            <button
-              type="button"
-              onclick="loginFormModalDisplayNone('login-modal-id')"
-              class="cancelbtn"
-            >
-              Longola
-            </button>
-            <span class="psw">Obosani <a href="#">mot de passe?</a></span>
-          </div>
-        </form>
-      </div>
-      <div id="sign-up-modal-id" class="login-modal">
-        <form
-          id="sign-up-form"
-          class="login-modal-content animate-login-modal"
-          action="/index"
-          method="POST"
-        >
-          <div class="imgcontainer">
-            <span
-              onclick="loginFormModalDisplayNone('sign-up-modal-id')"
-              class="close"
-              title="Close Modal"
-              >&times;</span
-            >
-            <div class="avatar">Bo S'aboné</div>
-          </div>
-          <div class="login-form-container">
-            <label for="fullName"><b>Nkombo na yo</b></label>
-            <input
-              type="text"
-              placeholder="Koma email na yo"
-              name="fullName"
-              required
-            />
-            <label for="telephone"><b>Nimero ya telephone (Optionel)</b></label>
-            <input
-              type="text"
-              placeholder="Koma email na yo"
-              name="telephone"
-              required
-            />
-
-            <label for="email"><b>Email na yo</b></label>
-            <input
-              type="text"
-              placeholder="Koma email na yo"
-              name="email"
-              required
-            />
-
-            <label for="psw"><b>Mot de passe</b></label>
-            <input
-              type="password"
-              placeholder="Koma mot de passe"
-              name="psw"
-              required
-            />
-
-            <button type="submit">Connexion</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember" />
-              Kanisa ngai
-            </label>
-          </div>
-          <div class="login-form-container">
-            <button
-              type="button"
-              onclick="loginFormModalDisplayNone('sign-up-modal-id')"
-              class="cancelbtn"
-            >
-              Longola
-            </button>
-            <span class="psw">Obosani <a href="#">mot de passe?</a></span>
-          </div>
-        </form>
-      </div>
       <header>
         <nav>
           <h2 class="logo">Boye <span>bi</span></h2>
           <ul>
             <li><a href="/about">A propos na biso</a></li>
           </ul>
-          <button
-            type="button"
-            onclick="loginFormModalDisplayBlock('sign-up-modal-id')"
-          >
-            Bo S'aboné
-          </button>
+          <a href="/signup" class="custom-btn">Bo S'aboné</a>
         </nav>
       </header>
       <div class="container">
@@ -163,24 +41,8 @@
           <div class="row">
             <ul class="column">
               <li>
-                <button
-                  type="button"
-                  onclick="loginFormModalDisplayBlock('login-modal-id')"
-                >
-                  Connexion
-                </button>
+                <a href="/login" class="custom-btn">Connexion</a>
               </li>
-              <!-- <li>
-                <div class="d-flex justify-content-end">
-                  <img
-                    src="img/bamuangisi.png"
-                    alt="bamuangisi"
-                    width="50px"
-                    height="50px"
-                  />
-                  <p class="p-2 bd-highlight">Bamuangisi TV</p>
-                </div>
-              </li> -->
             </ul>
           </div>
           <img
@@ -235,21 +97,5 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"
-      defer
-    ></script>
-    <script
-      src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"
-      defer
-    ></script>
-    <script src="js/scripts.js"></script>
-    <script>
-      windowElementLoaded(window);
-    </script>
   </body>
 </html>

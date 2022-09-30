@@ -68,11 +68,12 @@ function signInWithEmailPassword(email, password) {
       return firebase.auth().signOut();
     })
     .then(() => {
+      document.getElementById("login-spin").style.display = "none";
       window.location.assign("/videos");
     })
     .catch((err) => {
       alert(
-        "Connexion e échoué. Meka lisusu. Email Oyo te pe Mot de passe oyo esimbi te."
+        "Connexion e échoué. Meka lisusu. Email Oyo to pe Mot de passe oyo esimbi te."
       );
     });
   return false;
@@ -112,7 +113,7 @@ function signUpWithEmailPassword(fullName, telephone, email, password) {
     .catch((err) => {
       console.log(err.mess);
       alert(
-        "Connexion e échoué. Meka lisusu. Email Oyo te pe Mot de passe oyo esimbi te."
+        "Connexion e échoué. Meka lisusu. Email Oyo to pe Mot de passe oyo esimbi te."
       );
     });
   return false;
@@ -180,6 +181,7 @@ function postNewVideo(payload) {
 function addLoginFormEventListener() {
   document.getElementById("login-form").addEventListener("submit", (e) => {
     e.preventDefault();
+    document.getElementById("login-spin").style.display = "block";
     const [email, password] = getLoginPasswordFromEvent(e);
     signInWithEmailPassword(email, password);
   });
@@ -199,11 +201,18 @@ function resetFormData(id) {
   document.getElementById(id).reset();
 }
 
-function windowElementLoaded(window) {
+function loginFormLoaded(window) {
   window.addEventListener("DOMContentLoaded", () => {
     firebase.initializeApp(firebaseConfig);
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
     addLoginFormEventListener();
+  });
+}
+
+function signupFormLoaded(window) {
+  window.addEventListener("DOMContentLoaded", () => {
+    firebase.initializeApp(firebaseConfig);
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
     addSignUpFormEventListener();
   });
 }

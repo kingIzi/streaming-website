@@ -51,6 +51,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/signup", (req, res) => {
+  res.render("signUp");
+});
+
 app.get("/videos", (req, res) => {
   const sessionCookie = req.cookies.session || "";
   admin
